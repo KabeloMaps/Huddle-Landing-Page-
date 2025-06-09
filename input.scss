@@ -1,8 +1,127 @@
 body {
-  background-color: lightblue;
+  font-family: "Open Sans", sans-serif;
+  background-color: hsl(257, 40%, 49%);
+}
+
+main {
+  padding: 25px;
+  margin: 35px;
+  margin-top: 0;
+}
+
+#Bg-Desktop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+}
+
+.Main-Content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 100vh;
+}
+
+.Header-Illustration {
+}
+
+.Header-Content {
+  text-align: left;
+}
+
+#Header-Logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  margin: 25px;
+}
+
+#Illustratoin {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+  margin: 20px;
 }
 
 h1 {
-  color: darkblue;
-  font-size: 2rem;
+  font-family: "Poppins", "sans-serif";
+  font-weight: 800;
+  font-size: 45px;
+  color: hsl(0, 0%, 100%);
+  justify-content: flex-start;
+}
+
+p {
+  color: white;
+  font-size: 20px;
+}
+
+button {
+  padding: 2rem 1.5rem;
+  border-radius: 150px;
+  border-style: 1px solid hsl(0, 0%, 100%);
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 20px 110px;
+  transition: 0.3 s;
+}
+
+button:hover {
+  background-color: hsl(300, 69%, 71%);
+  color: white;
+  cursor: pointer;
+}
+
+#btn-name {
+  font-size: 25px;
+  color: hsl(257, 40%, 49%);
+}
+
+.social-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 40px); // 3 columns, each 40px wide
+  gap: 0.5rem; // small gap between icons
+
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+  height: auto; // Override section height
+  align-items: center; // Center icons vertically in grid
+  padding: 0;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.2rem;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+}
+.social-icons a:hover {
+  color: hsl(300, 69%, 71%);
 }
