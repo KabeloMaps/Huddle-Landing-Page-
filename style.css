@@ -56,11 +56,21 @@ section {
   }
 }
 
-@media screen and (min-width: 1399px) {
+.Header-Content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-top: 1rem;
+  margin: 1rem;
+}
+@media screen and (max-width: 1399px) {
   .Header-Content {
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     min-width: 100px;
-    margin: 1em;
   }
 }
 
@@ -106,10 +116,10 @@ button {
 @media screen and (max-width: 1400px) {
   button {
     display: flex;
-    flex-direction: column;
-    width: 100%;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    min-width: 100px;
   }
 }
 
