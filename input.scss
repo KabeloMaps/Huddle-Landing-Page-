@@ -1,12 +1,17 @@
 body {
   font-family: "Open Sans", sans-serif;
   background-color: hsl(257, 40%, 49%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
   padding: 25px;
   margin: 35px;
   margin-top: 0;
+
+  flex: 1 0 auto;
 }
 
 #Bg-Desktop {
@@ -17,6 +22,15 @@ main {
   height: 100vh;
   object-fit: cover;
 }
+
+#Header-Logo {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  //top: 20px;
+  //left: 20px;
+}
+
 section {
   position: relative;
   width: 100%;
@@ -33,32 +47,41 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  height: 100vh;
+  height: auto;
+
+  @media screen and (max-width: 1398px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+
+    row-gap: 2rem;
+  }
+}
+.Header-Content {
+  @media screen and (min-width: 1399px) {
+    text-align: left;
+    min-width: 100px;
+    margin: 1em;
+  }
 }
 
 .Header-Illustration {
-}
+  //position: absolute;
+  //top: 10px;
 
-.Header-Content {
-  text-align: left;
-}
-
-#Header-Logo {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  margin: 25px;
-}
-
-#Illustratoin {
-  position: absolute;
-  top: 10px;
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  margin-top: 200px;
 
-  margin: 20px;
+  @media screen and (max-width: 600px) {
+    margin: 0 200px 0 200px;
+  }
 }
 
 h1 {
@@ -84,6 +107,14 @@ button {
   border: none;
   padding: 20px 110px;
   transition: 0.3 s;
+
+  @media screen and (max-width: 1400px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 button:hover {
@@ -103,10 +134,18 @@ button:hover {
   gap: 0.5rem; // small gap between icons
 
   justify-content: flex-end;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  margin-top: -15vh;
   height: auto; // Override section height
   align-items: center; // Center icons vertically in grid
   padding: 0;
+
+  @media screen and (max-width: 1400px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+  }
 }
 
 .social-icons a {
@@ -119,9 +158,25 @@ button:hover {
   border-radius: 50%;
   color: white;
   font-size: 1.2rem;
-  transition: background 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
   text-decoration: none;
 }
 .social-icons a:hover {
   color: hsl(300, 69%, 71%);
+}
+
+picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+picture img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
 }
